@@ -1,4 +1,4 @@
-import caesarCipher from './caesarCipher';
+import caesarCipher from '../code/caesarCipher';
 
 test('offsets word by given number', () => {
   expect(caesarCipher('gab', 1)).toBe('hbc');

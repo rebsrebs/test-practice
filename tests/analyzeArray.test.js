@@ -1,6 +1,4 @@
-//An analyzeArray function that takes an array of numbers and returns an object with the following properties: average, min, max, and length.
-
-import analyzeArray from './analyzeArray';
+import analyzeArray from '../code/analyzeArray';
 
 test('returns message if array has a string', () => {
   expect(analyzeArray([1,3,'red'])).toBe('array must only contain numbers');
