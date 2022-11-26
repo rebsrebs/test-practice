@@ -1,38 +1,18 @@
-// function calculator(a,b, op) {
-//   if (op === 'sum') {
-//     return a + b;
-//   } else if (op === 'subtract') {
-//     return a - b;
-//   } else if (op === 'multiply') {
-//     return a * b;
-//   } else if (op === 'divide') {
-//     return a/b;
-//   }
-// }
 
-const Calculator = function(a, b, op) {
+//calculator created with object initializer
+//add is name of function
+const calculator = {
+  add: (numA, numB) => {
+    if (!isNaN(numA) && !isNaN(numB)) {
+      return numA + numB;
+    } else {
+      return 'error';
+    }
+  },
+  sub: (numA, numB) => numA - numB,
+  mul: (numA, numB) => numA * numB,
+  div: (numA, numB) => numA / numB,
+  
+}
 
-  const sum = () => a + b;
-  const subtract = () => a - b;
-  const multiply = () => a * b;
-  const divide = () => a / b;
-
-  let result = '';
-  if (op === 'sum') {
-    result = sum
-  } else if (op === 'subtract') {
-    result = subtract;
-  } else if (op === 'multiply') {
-    result = multiply;
-  } else if (op === 'divide') {
-    result = divide;
-  }
-
-  return { result};
-
-};
-
-
-
-// export default calculator; 
-// export default Calculator; 
+// export default calculator;

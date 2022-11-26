@@ -1,21 +1,24 @@
-import Calculator from './calculator'; 
+import calculator from './calculator'; 
 
 test('adds 1 + 2 to equal 3', () => {
-  expect(Calculator(1,2,'sum')).toBe(3);
+  expect(calculator.add(1,2)).toBe(3);
 });
 
-// test('adds 1 + 2 to equal 3', () => {
-//   expect(calculator(1,2,'sum')).toBe(3);
-// });
+test('subtracts 2 from 1 to equal -1', () => {
+  expect(calculator.sub(1,2)).toBe(-1);
+});
 
-// test('5 - 2 to equal 3', () => {
-//   expect(calculator(5,2,'subtract')).toBe(3);
-// });
+test('divides 5 by 2 to equal 2.5', () => {
+  expect(calculator.div(5,2)).toBe(2.5);
+});
 
-// test('5 * 2 to equal 10', () => {
-//   expect(calculator(5,2,'multiply')).toBe(10);
-// });
+test('multiplies 5 by 2 to equal 10', () => {
+  expect(calculator.mul(5,2)).toBe(10);
+});
 
-// test('64 / 2 to equal 32', () => {
-//   expect(calculator(64,2,'divide')).toBe(32);
-// });
+test('tries to add 1 to a string', () => {
+  expect(calculator.add(1,'red')).toBe('error');
+});
+
+
+
