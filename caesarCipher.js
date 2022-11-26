@@ -12,9 +12,18 @@ function caesarCipher(phrase, num) {
     } else {
       let currentIndex = alphabet.indexOf(current);
       let newIndex = parseInt(currentIndex) + parseInt(num);
-      var newChar = alphabet[newIndex];
+
+      if (newIndex > 25) {
+        newIndex = newIndex - 26;
+      }
+
+      if (newIndex < 0) {
+        newIndex = newIndex + 26;
       }
       
+      var newChar = alphabet[newIndex];
+      }
+
     cipher += newChar;
   }
 
