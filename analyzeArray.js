@@ -1,7 +1,7 @@
 function analyzeArray(array){
 
   // make sure array has numbers
-  if (!array.some(isNaN) === false) {
+  if (!array.some(isNaN) == false || array.includes(null) == true || array.includes('') == true) {
     return 'array must only contain numbers';
   } else {
     let length = array.length;
