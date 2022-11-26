@@ -2,15 +2,6 @@
 
 import analyzeArray from './analyzeArray';
 
-// test('returns length of array', () => {
-//   expect(analyzeArray([1,3,5])).toStrictEqual({'length': 3});
-// })
-
-// test('returns length and average of array', () => {
-//   expect(analyzeArray([1,3,5])).toStrictEqual({'length': 3, 
-//   'average': 3});
-// })
-
 test('returns message if array has a string', () => {
   expect(analyzeArray([1,3,'red'])).toBe('array must only contain numbers');
 })
@@ -23,6 +14,6 @@ test('returns message if array has an empty item', () => {
   expect(analyzeArray([1,3,''])).toBe('array must only contain numbers');
 })
 
-// test('returns average, min, max and length of array', () => {
-//   expect(analyzeArray([1,3,5])).toBe({average: 3, min: 1, max: 5, length: 3});
-// })
+test('returns average, min, max and length of array', () => {
+  expect(analyzeArray([1,3,5])).toStrictEqual({average: 3, min: 1, max: 5, length: 3});
+})

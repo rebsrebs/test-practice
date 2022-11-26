@@ -12,8 +12,13 @@ function analyzeArray(array){
       console.log(`sum is ${sum}`);
     }
     let average = sum/length;
+    let min = Math.min(...array);
+    let max = Math.max(...array);
+
     return {
       'length': length,
+      'min': min,
+      'max': max,
       'average': average
     }
   }
