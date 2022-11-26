@@ -6,11 +6,15 @@ function caesarCipher(phrase, num) {
 
   for (let i = 0; i < phrase.length; i++) {
     let current = phrase.charAt(i);
-    console.log(`current is ${current}`);
-    let currentIndex = alphabet.indexOf(current);
-    let newIndex = parseInt(currentIndex) + parseInt(num);
-    let newChar = alphabet[newIndex];
 
+    if (current === ' '){
+      var newChar = ' ';
+    } else {
+      let currentIndex = alphabet.indexOf(current);
+      let newIndex = parseInt(currentIndex) + parseInt(num);
+      var newChar = alphabet[newIndex];
+      }
+      
     cipher += newChar;
   }
 
